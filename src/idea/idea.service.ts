@@ -8,6 +8,7 @@ import { IdeaDTO } from './idea.dtos';
 @Injectable()
 export class IdeaService {
     constructor(@InjectRepository(IdeaEntity) private ideaRepository: Repository<IdeaEntity>) { }
+
     async GetAllIdeas() {
         return await this.ideaRepository.find();
     }
